@@ -1,0 +1,25 @@
+#popup {
+    width: 700px;
+    padding: 10px;
+}
+
+#popup #popup_body {
+    margin-bottom: 15px;
+}
+
+#images-container {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+#images-container img {
+    padding: 5px;
+    margin: 5px 5px 5px 0;
+    object-fit: cover;
+    width: 28%;
+    border: 1px solid;
+}
+
+img[data-is-selected=true] {
+    border: 2px solid blue !important;
+}

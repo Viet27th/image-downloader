@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+
+<html lang="">
+<head>
+  <meta charset="utf-8">
+  <title></title>
+  <link rel="stylesheet" href="css/popup.css">
+</head>
+
+<body>
+  <div id="popup">
+    <div id="popup_body">
+      <p>- Nhập Selector trên website. Nếu không sẽ mặc định tìm kiếm ảnh trên cả trang.</p>
+      <p>- Quy tắc nhập "Selector":</p>
+      <ul>
+        <li>Nếu là class: thêm dấu chấm "." trước tên class</li>
+        <li>Nếu là id: thêm dấu thăng "#" trước tên id</li>
+      </ul>
+
+      <p>- Nhập "File name". Nếu không nhập, file name sẽ mặc định theo thứ tự file bắt đầu từ 0</p>
+      <p>- Quy tắc nhập "File name":</p>
+      <ul>
+        <li>
+          File name là tiền tố, ví dụ, nếu bạn nhập file name là "picture_" thì các file download về sẽ
+          có tên như sau: "picture_1", "picture_2", ...
+        </li>
+      </ul>
+
+      <p>- Nhập "Folder name" là tên của thư mục sẽ chứa những ảnh được tải về</p>
+     
+      <div style="margin-bottom: 10px;">
+        <label for="selector"><strong>Selector:</strong></label>
+        <br>
+        <input id="selector" type="text" placeholder="Selector">
+      </div>
+
+      <div style="margin-bottom: 10px;">
+        <label for="fileName"><strong>File name:</strong></label>
+        <br>
+        <input id="fileName" type="text" placeholder="File name">
+      </div>
+
+      <div style="margin-bottom: 10px;">
+        <label for="folderName"><strong>Folder name:</strong></label>
+        <br>
+        <input id="folderName" type="text" placeholder="Folder name">
+      </div>
+
+      <button id="btn-get-imgs" type="button">Quét ảnh trên trang</button>
+      <button id="btn-download" type="button">Download</button>
+      
+
+      <div id="images-container"></div>
+    </div>
+
+     <!--https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/user_interface/Popups-->
+    <p>Liên hệ với tôi qua email: <span style="color: green">viet27th@gmail.com</span> nếu bạn có ý tưởng mới cho ứng dụng và yêu cầu.</p>
+  </div>
+
+  <script src="lib/jszip.min.js"></script>
+  <script src="lib/filesaver.min.js"></script>
+  <script src="js/constants.js"></script>
+  <script src="js/popup.js"></script>
+</body>
+
+</html>
